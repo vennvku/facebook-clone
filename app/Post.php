@@ -2,22 +2,22 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Scopes\ReverseScope;
+use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-  protected $guarded = [];
+    protected $guarded = [];
 
-  protected static function boot()
-  {
-    parent::boot();
+    protected static function boot()
+    {
+        parent::boot();
 
-    static::addGlobalScope(new ReverseScope());
-  }
+        static::addGlobalScope(new ReverseScope());
+    }
 
-  public function user()
-  {
-    return $this->belongsTo(User::class);
-  }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

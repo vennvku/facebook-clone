@@ -15,18 +15,18 @@ class Post extends JsonResource
      */
     public function toArray($request)
     {
-      return [
-        'data' => [
-            'type' => 'posts',
-            'post_id' => $this->id,
-            'attributes' => [
-                'posted_by' => new UserResource($this->user),
-                'body' => $this->body,
+        return [
+            'data' => [
+                'type' => 'posts',
+                'post_id' => $this->id,
+                'attributes' => [
+                    'posted_by' => new UserResource($this->user),
+                    'body' => $this->body,
+                ]
+            ],
+            'links' => [
+                'self' => url('/posts/'.$this->id),
             ]
-        ],
-        'links' => [
-            'self' => url('/posts/'.$this->id),
-        ]
-      ];
+        ];
     }
 }

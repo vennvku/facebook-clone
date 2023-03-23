@@ -1,13 +1,13 @@
 <template>
-  <div>Start Component</div>
+    <div>sdflksjdflkjsd</div>
 </template>
 
 <script>
-export default {
-  name: "Start"
-}
+    export default {
+        name: "Start"
+    }
 </script>
 
-<style>
+<style scoped>
 
 </style>
