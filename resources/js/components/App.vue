@@ -1,13 +1,13 @@
 <template>
-  <div>
-    Home
+  <div class="flex flex-col flex-1 h-screen overflow-y-hidden">
+
     <router-view></router-view>
   </div>
 </template>
 
 <script>
   export default {
-      name: "App"
+    name: "App",
   }
 </script>
 

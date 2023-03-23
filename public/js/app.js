@@ -1943,7 +1943,9 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_vm._v("\n  Home\n  "), _c("router-view")], 1);
+  return _c("div", {
+    staticClass: "flex flex-col flex-1 h-screen overflow-y-hidden"
+  }, [_c("router-view")], 1);
 };
 var staticRenderFns = [];
 render._withStripped = true;
